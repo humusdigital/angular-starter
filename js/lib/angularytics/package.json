@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "angularytics@^0.4.0",
+        "scope": null,
+        "escapedName": "angularytics",
+        "name": "angularytics",
+        "rawSpec": "^0.4.0",
+        "spec": ">=0.4.0 <0.5.0",
+        "type": "range"
+      },
+      "/Applications/AMPPS/www/t004"
+    ]
+  ],
+  "_from": "angularytics@>=0.4.0 <0.5.0",
+  "_id": "angularytics@0.4.0",
+  "_inCache": true,
+  "_location": "/angularytics",
+  "_npmUser": {
+    "name": "mgonto",
+    "email": "martin@gonto.com.ar"
+  },
+  "_npmVersion": "1.4.21",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "angularytics@^0.4.0",
+    "scope": null,
+    "escapedName": "angularytics",
+    "name": "angularytics",
+    "rawSpec": "^0.4.0",
+    "spec": ">=0.4.0 <0.5.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angularytics/-/angularytics-0.4.0.tgz",
+  "_shasum": "c442d444f187af19d4eaa2970111af7ff35db1b0",
+  "_shrinkwrap": null,
+  "_spec": "angularytics@^0.4.0",
+  "_where": "/Applications/AMPPS/www/t004",
+  "author": {
+    "name": "Martin Gontovnikas",
+    "email": "martin@gonto.com.ar"
+  },
+  "bugs": {
+    "url": "https://github.com/mgonto/angularytics/issues"
+  },
+  "dependencies": {},
+  "description": "The solution to tracking page views and events in a SPA with AngularJS",
+  "devDependencies": {
+    "grunt-bower": "*",
+    "grunt-bower-task": "*",
+    "grunt-cli": ">= 0.1.7",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-conventional-changelog": "0.0.12",
+    "grunt-karma": "*",
+    "grunt-ngmin": "latest",
+    "grunt-zip": "*"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "c442d444f187af19d4eaa2970111af7ff35db1b0",
+    "tarball": "https://registry.npmjs.org/angularytics/-/angularytics-0.4.0.tgz"
+  },
+  "engines": {
+    "node": ">= 0.9"
+  },
+  "filename": "angularytics.min.js",
+  "gitHead": "9a694c4cfc184603dcf20f7b9ec6d7b5fc93b6ab",
+  "homepage": "https://github.com/mgonto/angularytics",
+  "keywords": [
+    "angular",
+    "analytics",
+    "page view",
+    "events",
+    "track",
+    "tracking",
+    "spa"
+  ],
+  "main": "./dist/angularytics.min.js",
+  "maintainers": [
+    {
+      "name": "mgonto",
+      "email": "martin@gonto.com.ar"
+    }
+  ],
+  "name": "angularytics",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mgonto/angularytics.git"
+  },
+  "scripts": {
+    "test": "grunt test --verbose"
+  },
+  "version": "0.4.0"
+}
