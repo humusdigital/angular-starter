@@ -1,20 +1,70 @@
 myApp.controller('ListasCtrl', ['$scope', '$log', '$http', function($scope, $log, $http) {
 
-    //$scope.modelListas = modelListas;
+    var page = 1;
+    var totalPages;
 
-    // Simple GET request example:
-    $http({
-      method: 'GET',
-      url: 'https://reqres.in/api/users?page=1'
-    }).then(function successCallback(response) {
+    $scope.rewind = false;
+    $scope.forward = true;
 
-        $log.log(response);
-        $scope.modelListas = response.data.data;
+    $scope.paginate = function(direction){
 
-      }, function errorCallback(response) {
+      if (direction > 0) {
 
-        $log.log(response);
+        if (page == totalPages){
+          $scope.forward = false;
+        }else{
+          $scope.rewind = true;
+          page++;
+          if (page == totalPages) {
+            $scope.forward = false;
+          }
+          $scope.getList(page);
 
-      });
+        }
+
+      }else if (direction<0){
+
+        if (page == 1){
+
+        }else{
+          $scope.forward = true;
+          page--;
+            if (page == 1){
+                $scope.rewind = false;
+            }
+          $scope.getList(page);
+
+        }
+
+      }
+
+
+    };
+
+    $scope.getList = function(pageNum){
+
+        $log.log(pageNum);
+
+        // Simple GET request example:
+        $http({
+          method: 'GET',
+          url: 'https://reqres.in/api/users?page='+pageNum
+        }).then(function successCallback(response) {
+
+            $log.log(response.data.data);
+
+            totalPages = response.data.total_pages;
+            $scope.modelListas = response.data.data;
+
+          }, function errorCallback(response) {
+
+            $log.log(response);
+
+          });
+
+    };
+
+    $scope.getList(page);
+
 
 }]);
