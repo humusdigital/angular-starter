@@ -8,8 +8,7 @@
             <!-- <p>{{item.desc}}</p> -->
           </div>
         </md-list-item>
-</md-list>
-<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-<md-button class="md-raised md-warn"><<</md-button>
-<md-button class="md-raised md-warn">>></md-button>
-</section>
+<section layout="row" layout-align="center center" layout-wrap>
+    <md-button class="md-raised md-primary" ng-click="paginate(-1)"ng-disabled="!rewind"><<<<</md-button>
+    <md-button class="md-raised md-primary" ng-click="paginate(1)" ng-disabled="!forward">>>>></md-button>
+  </section>
