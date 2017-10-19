@@ -1,15 +1,20 @@
 var myApp = angular.module('starterApp', ['ngMaterial','ngRoute']);
 
-myApp.config(['$routeProvider',function($routeProvider) {
+myApp.config(['$routeProvider','$mdThemingProvider',function($routeProvider,$mdThemingProvider) {
+
+    $mdThemingProvider.theme('darky')
+    .primaryPalette('grey',{
+    'default': '900'}).dark();
+
+    $mdThemingProvider.setDefaultTheme('darky');
+    
+    $mdThemingProvider.alwaysWatchTheme(true);
 
     $routeProvider
-        .when('/home', {
-            templateUrl: 'home/home.html'
-        }).when('/listas', {
-            templateUrl: 'listas/listas.html',
-            controller: 'ListasCtrl'
+        .when('/welcome', {
+            templateUrl: 'welcome/welcome.html'
         }).otherwise({
-          redirectTo: '/home'
+          redirectTo: '/welcome'
         });
 
 }]);
