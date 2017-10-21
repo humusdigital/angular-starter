@@ -7,7 +7,7 @@ myApp.config(['$routeProvider','$mdThemingProvider',function($routeProvider,$mdT
     'default': '900'}).dark();
 
     $mdThemingProvider.setDefaultTheme('darky');
-    
+
     $mdThemingProvider.alwaysWatchTheme(true);
 
     $routeProvider
