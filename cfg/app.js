@@ -6,6 +6,9 @@ myApp.config(['$routeProvider','$mdThemingProvider',function($routeProvider,$mdT
     .primaryPalette('grey',{
     'default': '900'}).dark();
 
+    $mdThemingProvider.theme('myBtnTheme')
+    .primaryPalette('cyan');
+
     $mdThemingProvider.setDefaultTheme('darky');
 
     $mdThemingProvider.alwaysWatchTheme(true);
