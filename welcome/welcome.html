@@ -1,4 +1,4 @@
-<div ng-cloak ng-controller="welcomeCtrl">
+<div ng-cloak ng-controller="welcomeCtrl" layout-fill>
   <md-content>
     <md-toolbar>
       <div class="md-toolbar-tools">
@@ -32,5 +32,14 @@
         <span class="tabsTitle">NOVEDADES</span>
       </md-tab>
     </md-tabs>
-  </md-content> 
+  </md-content>
+  <md-content flex="100" layout-fill layout-padding layout="column">
+    <h2>Este es mi titulo</h2>
+    <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T.</p>
+    <div flex-offset="30" layout="column" md-theme="myBtnTheme">
+    <md-button class="md-primary" aria-label="More">
+        Lerr Documentos
+    </md-button>
+  </div>
+  </md-content>
 </div>
