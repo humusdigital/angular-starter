@@ -1,5 +1,3 @@
-.testing {
-  width: 71.42857%; }
-
-p {
-  font-weight: bold; }
+body,html{
+  overflow: hidden;
+}
