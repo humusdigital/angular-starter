@@ -1,0 +1,48 @@
+<div ng-cloak ng-controller="sectionCtrl" layout-fill>
+  <md-content>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Backspace">
+          <md-icon>keyboard_backspace</md-icon>
+        </md-button>
+
+        <h2 flex md-truncate>Bienvenidos</h2>
+        <md-button class="md-icon-button" aria-label="Search">
+          <md-icon>search</md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon style="color:rgb(187, 38, 38)">lock</md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon>more_vert</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-tabs md-no-pagination md-stretch-tabs="always" class="md-primary" md-selected="selectedIndex" >
+      <md-tab ui-sref="welcome">
+         <span class="tabsTitle">HOME</span>
+      </md-tab>
+      <md-tab ui-sref="secciones">
+        <span class="tabsTitle">SECCIONES</span>
+      </md-tab>
+      <md-tab ui-sref="novedades">
+        <span class="tabsTitle">NOVEDADES</span>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+  <md-content>
+    <md-list>
+  <md-list-item class="md-3-line" ng-repeat="item in items" ng-click="null">
+      <md-icon>{{item.icon}}</md-icon>
+    <div class="md-list-item-text" layout="column">
+       <md-divider md-inset ng-if="!$last"></md-divider>
+      <p><h3>{{item.id}}</h3>
+      <h4>{{item.title}}</h4></p>
+      <!-- <p>{{item.desc}}</p> -->
+    </div>
+</md-list>
+    <i class="material-icons">chevron_right</i>
+</md-content>
+</div>

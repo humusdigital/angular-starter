@@ -1,43 +1,11 @@
 <div ng-cloak ng-controller="welcomeCtrl" layout-fill>
-  <md-content>
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" aria-label="Backspace">
-          <md-icon>keyboard_backspace</md-icon>
-        </md-button>
-
-        <h2 flex md-truncate>Bienvenidos</h2>
-        <md-button class="md-icon-button" aria-label="Search">
-          <md-icon>search</md-icon>
-        </md-button>
-
-        <md-button class="md-icon-button" aria-label="More">
-          <md-icon style="color:rgb(187, 38, 38)">lock</md-icon>
-        </md-button>
-
-        <md-button class="md-icon-button" aria-label="More">
-          <md-icon>more_vert</md-icon>
-        </md-button>
-      </div>
-    </md-toolbar>
-    <md-tabs md-no-pagination md-stretch-tabs="always" class="md-primary" md-selected="selectedIndex" >
-      <md-tab ui-sref="welcome">
-         <span class="tabsTitle">HOME</span>
-      </md-tab>
-      <md-tab ui-sref="secciones">
-        <span class="tabsTitle">SECCIONES</span>
-      </md-tab>
-      <md-tab ui-sref="novedades">
-        <span class="tabsTitle">NOVEDADES</span>
-      </md-tab>
-    </md-tabs>
-  </md-content>
+<div ng-include src="'include/header.html'"> </div>
   <md-content flex="100" layout-fill layout-padding layout="column">
     <h2>Este es mi titulo</h2>
     <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T.</p>
     <div flex-offset="30" layout="column" md-theme="myBtnTheme">
-    <md-button class="md-primary" aria-label="More">
-        Lerr Documentos
+    <md-button href="#!/section" class="md-primary" aria-label="More">
+        Leer Documentos
     </md-button>
   </div>
   </md-content>

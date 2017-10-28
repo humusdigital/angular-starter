@@ -16,9 +16,12 @@ myApp.config(['$routeProvider','$mdThemingProvider',function($routeProvider,$mdT
     $routeProvider
         .when('/welcome', {
             templateUrl: 'welcome/welcome.html'
-        }).when('/Section', {
-            templateUrl: 'Section/section.html',
+        }).when('/section', {
+            templateUrl: 'section/section.html',
             controller:'sectionCtrl'
+          }).when('/documents', {
+                templateUrl: 'documents/document.html',
+                controller:'documentctrl'
         }).otherwise({
           redirectTo: '/welcome'
         });
