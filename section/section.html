@@ -1,0 +1,16 @@
+<div ng-cloak ng-controller="welcomeCtrl" layout-fill>
+  <div ng-include src="'includes/header.html'"></div>
+  <md-content layout-fill>
+    <md-list>
+    <md-list-item class="md-2-line" ng-repeat= "listas in items">
+          <md-icon class="md-avatar-icon">{{listas.icon}}</md-icon>
+          <div class="md-list-item-text">
+            <p>{{listas.title}}</p>
+          </div>
+          <md-icon href="#!/documents">chevron_right</md-icon>
+          <md-divider ng-if="!$last"></md-divider>
+    </md-list-item>
+  </md-list>
+  </md-content>
+ </md-content>
+</div>
