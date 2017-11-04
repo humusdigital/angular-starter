@@ -1,49 +1,20 @@
-<div ng-cloak layout-fill>
-  <header>
+<div ng-cloak  layout-fill>
   <div ng-include src="'includes/header.html'"></div>
-</header>
-  <md-content layout-fill>
-  <md-card>
+    <md-content layout-fill>
+  <md-card ng-repeat="card in documents">
   <md-card-header>
-      <img class="md-user-avatar" src="https://dummyimage.com/600x400/6b1c6b/1f2bcf.gif&text=Video">
+      <img class="md-user-avatar" ng-src="{{card.img}}">
   </md-card-header>
   <md-card-title>
     <md-card-title-text>
-      <span class="md-headline">Title</span>
+      <span class="md-headline">{{card.title}}</span>
     </md-card-title-text>
   </md-card-title>
     <md-card-content>
     <p>
-     Card content
+     {{card.summary}}
     </p>
   </md-card-content>
-</md-card>
-<md-card>
-<md-card-header>
-    <img class="md-user-avatar" src="https://dummyimage.com/400x400/694669/cf3c1f.gif&text=Imagen">
-</md-card-header>
-<md-card-title>
-  <md-card-title-text>
-    <span class="md-headline">Title</span>
-  </md-card-title-text>
-</md-card-title>
-  <md-card-content>
-  <p>
-   Card content
-  </p>
-</md-card-content>
-</md-card>
-<md-card>
-<md-card-title>
-  <md-card-title-text>
-    <span class="md-headline">Title</span>
-  </md-card-title-text>
-</md-card-title>
-  <md-card-content>
-  <p>
-   Card content
-  </p>
-</md-card-content>
 </md-card>
 </md-content>
 </div>

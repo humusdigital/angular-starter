@@ -1,8 +1,8 @@
-<div ng-cloak ng-controller="welcomeCtrl" layout-fill>
+<div ng-cloak layout-fill>
   <div ng-include src="'includes/header.html'"></div>
   <md-content layout-fill>
     <md-list>
-    <md-list-item class="md-2-line" ng-repeat= "listas in items" ng-href="#!/documents">
+    <md-list-item class="md-2-line" ng-repeat= "listas in items" ng-href="#!/documents/{{listas.id}}">
           <md-icon class="md-avatar-icon">{{listas.icon}}</md-icon>
           <div class="md-list-item-text">
             <p>{{listas.title}}</p>
