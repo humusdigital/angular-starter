@@ -1,32 +1,68 @@
-<md-toolbar>
+
+<md-toolbar ng-if="!showSearch">
+
   <div class="md-toolbar-tools">
     <md-button class="md-icon-button" aria-label="Backspace">
       <md-icon>keyboard_backspace</md-icon>
     </md-button>
-
     <h2 flex md-truncate>Bienvenidos</h2>
-    <md-button class="md-icon-button" aria-label="Search">
+    <md-button class="md-icon-button" aria-label="Search" ng-click="showSearchOn()">
       <md-icon>search</md-icon>
     </md-button>
-
-    <md-button class="md-icon-button" aria-label="More">
+    <md-button class="md-icon-button" aria-label="More" ng-click="textHttp()">
       <md-icon style="color:rgb(187, 38, 38)">lock</md-icon>
     </md-button>
+    <md-menu md-position-mode="target-right target">
+      <md-button class="md-icon-button" aria-label="Open sample menu" ng-click="openMenu($mdMenu,$event)">
+      <md-icon md-menu-origin>more_vert</md-icon>
+      </md-button>
+      <md-menu-content width="4">
+       <md-menu-item>
+          <md-button>
+            <div layout="row" flex>
+             <md-icon md-menu-align-target>contact_mail</md-icon>
+             <p flex>Contacto</p>
+            </div>
+          </md-button>
+      </md-menu-item>
+      <md-menu-item>
+          <md-button>
+            <div layout="row" flex>
+              <md-icon md-menu-align-target>share</md-icon>
+             <p flex>Compartir</p>
+            </div>
+          </md-button>
+      </md-menu-item>
+ </md-menu-content>
+    </md-menu>
+  </div>
+</md-toolbar>
 
-    <md-button class="md-icon-button" aria-label="More">
-      <md-icon>more_vert</md-icon>
+<md-toolbar ng-if="showSearch">
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" aria-label="Backspace" ng-click="showSearchOff()">
+      <md-icon>clear</md-icon>
+    </md-button>
+    <md-input-container flex>
+          <label>Que necesita buscar?</label>
+          <input name="key" type="text" ng-model="busqueda.key">
+    </md-input-container>
+    <md-button class="md-icon-button" aria-label="Search" ng-click="buscar()">
+      <md-icon>search</md-icon>
     </md-button>
   </div>
 </md-toolbar>
+
 <md-content>
   <md-tabs md-no-pagination md-stretch-tabs="always" class="md-primary" md-selected="selectedIndex" >
     <md-tab ui-sref="welcome">
        <span class="tabsTitle">HOME</span>
     </md-tab>
-    <md-tab ui-sref="secciones">
+    <md-tab ui-sref="section">
       <span class="tabsTitle">SECCIONES</span>
     </md-tab>
     <md-tab ui-sref="novedades">
       <span class="tabsTitle">NOVEDADES</span>
     </md-tab>
   </md-tabs>
+</md-content>

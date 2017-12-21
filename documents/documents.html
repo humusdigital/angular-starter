@@ -1,7 +1,7 @@
 <div ng-cloak  layout-fill>
   <div ng-include src="'includes/header.html'"></div>
     <md-content layout-fill>
-  <md-card ng-repeat="card in documents">
+  <md-card ng-repeat="card in documents" ng-href="#!/document/{{card.id}}">
   <md-card-header>
       <img class="md-user-avatar" ng-src="{{card.img}}">
   </md-card-header>
