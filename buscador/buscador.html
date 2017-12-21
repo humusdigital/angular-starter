@@ -1,0 +1,20 @@
+<div ng-cloak  layout-fill>
+  <div ng-include src="'includes/header.html'"></div>
+    <md-content layout-fill>
+  <md-card ng-repeat="bus in buscadorModel | filter:buscador">
+  <md-card-header>
+      <img class="md-user-avatar" ng-src="{{bus.img}}">
+  </md-card-header>
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">{{bus.title}}</span>
+    </md-card-title-text>
+  </md-card-title>
+    <md-card-content>
+    <p>
+     {{bus.summary}}
+    </p>
+  </md-card-content>
+</md-card>
+</md-content>
+</div>
