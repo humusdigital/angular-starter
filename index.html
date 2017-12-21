@@ -8,17 +8,23 @@
 </head>
 <body ng-app="starterApp" ng-cloak>
 
-  <div flex layout="column" layout-fill ng-view> </div>
+  <div flex layout="column" layout-fill ui-view ng-controller="headerController"> </div>
 
   <script src="js/lib/angular/angular.min.js"></script>
-  <script src="js/lib/angular-route/angular-route.min.js"></script>
+  <script src="//unpkg.com/angular-ui-router@0.4.2/release/angular-ui-router.js"></script>
   <script src="js/lib/angular-animate/angular-animate.min.js"></script>
   <script src="js/lib/angular-aria/angular-aria.min.js"></script>
   <script src="js/lib/angular-messages/angular-messages.min.js"></script>
   <script src="js/lib/angular-material/angular-material.min.js"></script>
   <script src="cfg/app.js"></script>
+  <script src="services/apiservices.js"></script>
+  <script src="auth/authController.js"></script>
+  <script src="includes/headerController.js"></script>
   <script src="welcome/welcomeController.js"></script>
   <script src="section/sectionController.js"></script>
+  <script src="novedades/novedadesController.js"></script>
   <script src="documents/documentsController.js"></script>
+  <script src="document/documentController.js"></script>
+  <script src="buscador/buscadorController.js"></script>
 </body>
 </html>

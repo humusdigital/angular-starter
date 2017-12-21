@@ -1,0 +1,34 @@
+<div layout="column" ng-cloak>
+    <div ng-include src="'includes/header.html'"></div>
+    <md-content layout-fill>
+      <md-card ng-repeat="document in documentModel">
+        <md-card-header>
+          <md-card-header-text>
+            <span class="md-title">{{document.title}}</span>
+          </md-card-header-text>
+        </md-card-header>
+        <img class="md-user-avatar" ng-src="{{document.img}}">
+        <md-card-content>
+          <p>{{document.parrafo}}</p>
+        </md-card-content>
+        <img class="md-user-avatar" ng-src="{{document.img2}}">
+        <md-card-content>
+          <p>{{document.parrafo2}}</p>
+        </md-card-content>
+        <md-card-header-text>
+          <span class="md-title">Descargables</span>
+        </md-card-header-text>
+        <md-card-actions layout="row" layout-align="end center" ng-repeat="des in document.descargable">
+          <md-icon class="md-avatar-icon">{{des.icon}}</md-icon>
+          <a target="_blank" href="{{des.descargable}}">{{des.descargable}}</a>
+        </md-card-actions>
+        <md-card-header-text>
+          <span class="md-title">Links</span>
+        </md-card-header-text>
+        <md-card-actions layout="row" layout-align="end center" ng-repeat="do in document.links">
+          <md-icon class="md-avatar-icon">{{do.icon2}}</md-icon>
+          <md-button ng-href="{{do.link}}">{{do.link}}</md-button>
+        </md-card-actions>
+      </md-card>
+    </md-content>
+</div>
